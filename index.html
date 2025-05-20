@@ -2,7 +2,7 @@
 <html lang="si">
 <head>
   <meta charset="UTF-8">
-  <title>Loan Application</title>
+  <title>ණය අයදුම්පත</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -70,6 +70,7 @@
       margin-bottom: 16px;
       box-shadow: 0 1px 6px rgba(0,0,0,0.05);
     }
+
     .promo-section {
       display: flex;
       flex-direction: column;
@@ -80,24 +81,41 @@
       margin: 40px auto;
       max-width: 500px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+    }
+
     .promo-image {
       width: 100%;
       height: auto;
       border-radius: 10px;
-   }
+    }
+
     .promo-text {
       margin-top: 20px;
       text-align: center;
       color: #333;
       font-size: 18px;
-      } 
+    }
 
-     }
+    .promo-button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .promo-button:hover {
+      background-color: #254eda;
+    }
 
     .steps-section {
       margin-top: 30px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .step {
@@ -109,15 +127,32 @@
       border-radius: 10px;
     }
 
-    .login-text a {
-      color: #1e3a8a;
-      text-decoration: none;
+    .number {
+      background-color: #4f46e5;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+    }
+
+    .check {
+      margin-left: auto;
+      color: green;
+      font-size: 24px;
       font-weight: bold;
     }
-    
-   .promo-button:hover {
-      background-color: #254eda;
-   }
+
+    .step .text {
+      flex: 1;
+      text-align: left;
+    }
+
     .icon {
       font-size: 28px;
       color: #9b7bff;
@@ -157,23 +192,23 @@
 
   <!-- Loan Calculator Section -->
   <div class="container">
-    <h2>Get up to රු 500,000 loan fully online!</h2>
-    <p>Simple application process. Only NIC is required.</p>
+    <h2>රු 500,000 දක්වා ණය – සම්පූර්ණයෙන්ම Online!</h2>
+    <p>සරල අයදුම් ක්‍රියාවලියක් – ඔබේ හැඳුනුම්පත පමණක් අවශ්‍ය වේ.</p>
 
     <div class="slider-container">
-      <label for="loanRange">Set up your loan:</label>
+      <label for="loanRange">ඔබගේ ණය මුදල තෝරන්න:</label>
       <input type="range" id="loanRange" min="30000" max="500000" step="10000" value="30000" />
       <div class="output">රු <span id="loanAmount">30,000</span></div>
     </div>
 
     <div class="repayment">
-      Total repayment amount: රු <span id="repaymentAmount">32,400</span><br>
-      Interest rate: <span id="interestRate">8%</span><br>
-      <strong>Duration:</strong> <span id="duration">6</span> months<br>
-      <strong>Monthly payment:</strong> රු <span id="monthlyPayment">5,400</span>
+      මුළු ආපසු ගෙවීමේ මුදල: රු <span id="repaymentAmount">32,400</span><br>
+      පොලී අනුපාතය: <span id="interestRate">8%</span><br>
+      <strong>කාලය:</strong> <span id="duration">6</span> මාස<br>
+      <strong>මාසික ගෙවීම:</strong> රු <span id="monthlyPayment">5,400</span>
     </div>
 
-    <button class="btn">Apply for a loan</button>
+    <button class="btn">ණයක් ඉල්ලන්න</button>
   </div>
 
   <!-- Eligibility Section -->
@@ -181,58 +216,59 @@
     <div class="card">
       <div class="icon">👤</div>
       <div class="info">
-        <h3>Age</h3>
-        <p>20–60 years old</p>
+        <h3>වයස</h3>
+        <p>අවුරුදු 20–60 අතර</p>
       </div>
     </div>
     <div class="card">
       <div class="icon">📍</div>
       <div class="info">
-        <h3>Location</h3>
-        <p>Resident in Sri Lanka</p>
+        <h3>නවසී ස්ථානය</h3>
+        <p>ශ්‍රී ලංකාවේ නවාසිකයෙකු වීම</p>
       </div>
     </div>
     <div class="card">
       <div class="icon">💳</div>
       <div class="info">
-        <h3>Occupation</h3>
-        <p>Have an income</p>
+        <h3>රැකියාව</h3>
+        <p>ස්ථිර ආදායමක් තිබීම</p>
       </div>
     </div>
-    <button class="cta">Take a loan</button>
+    <button class="cta">දැන්ම ණයක් ඉල්ලන්න</button>
   </div>
 
+  <!-- Promo Section -->
   <section class="promo-section">
     <img src="https://i.ibb.co/nMDZ3sMb/pexels-moose-photos-170195-1036622.jpg" alt="Promo Image" class="promo-image" />
     <div class="promo-text">
-      <p>Get first online loan within 15 minutes!</p>
-      <button class="promo-button">Apply for a loan</button>
+      <p>ඔබගේ පළමු online ණය – විනාඩි 15න්!</p>
+      <button class="promo-button">දැන්ම ඉල්ලන්න</button>
     </div>
   </section>
-</div>
 
+  <!-- Steps Section -->
   <div class="steps-section">
-      <div class="step" id="step1">
-        <div class="number">1</div>
-        <div class="text">
-          <strong>ඔබේ ණය මුදල තෝරන්න</strong><br>
-        </div>
+    <div class="step" id="step1">
+      <div class="number">1</div>
+      <div class="text">
+        <strong>ඔබේ ණය මුදල තෝරන්න</strong><br>
       </div>
-      <div class="step" id="step2">
-        <div class="number">2</div>
-        <div class="text">
-          <strong>තිරණය සඳහා රැදී සිටින්න</strong><br>
-        </div>
+    </div>
+    <div class="step" id="step2">
+      <div class="number">2</div>
+      <div class="text">
+        <strong>තිරණය සඳහා රැදී සිටින්න</strong><br>
       </div>
-      <div class="step" id="step3">
-        <div class="number">3</div>
-        <div class="text">
-          <strong>ඔබගේ ගිණුමට මුදල් ලැබාගෙන</strong><br>
-        </div>
-        <div class="check">✔</div>
+    </div>
+    <div class="step" id="step3">
+      <div class="number">3</div>
+      <div class="text">
+        <strong>ඔබගේ ගිණුමට මුදල් ලැබේ</strong><br>
       </div>
-   </div>
+      <div class="check">✔</div>
+    </div>
   </div>
+
   <script>
     const loanRange = document.getElementById("loanRange");
     const loanAmount = document.getElementById("loanAmount");
@@ -265,10 +301,8 @@
       monthlyPayment.textContent = monthly.toLocaleString(undefined, { maximumFractionDigits: 0 });
     }
 
-    // Initialize on load
     updateLoanDetails(loanRange.value);
 
-    // On slider move
     loanRange.addEventListener("input", function () {
       updateLoanDetails(this.value);
     });
