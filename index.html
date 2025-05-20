@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>ණය අයදුම්පත</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -180,6 +181,59 @@
     .features-section h2 {
       text-align: center;
     }
+
+    /* Footer styles */
+    .footer {
+      background-color: #000;
+      padding: 40px 20px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .footer-links div {
+      flex: 1 1 200px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #aaa;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact {
+      border-top: 1px solid #222;
+      padding-top: 30px;
+    }
+
+    .footer-contact h3 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-contact p {
+      margin: 8px 0;
+      color: #7fffaf;
+      font-size: 16px;
+    }
+
+    .footer-contact i {
+      margin-right: 10px;
+      color: #7fffaf;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: #aaa;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -291,6 +345,34 @@
       <button class="promo-button">Apply for a loan</button>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Apply for a loan</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Help</a>
+      </div>
+      <div>
+        <a href="#">How to pay</a>
+        <a href="#">About</a>
+        <a href="#">Terms & conditions</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact us:</h3>
+      <p><i class="fas fa-phone-alt"></i>0114279800</p>
+      <p><i class="fas fa-envelope"></i>help@ceyloan.lk</p>
+      <p><i class="fas fa-clock"></i>Daily 8:00 AM - 10:30 PM</p>
+      <div class="social-icons">
+        <span>Follow us</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const loanRange = document.getElementById("loanRange");
