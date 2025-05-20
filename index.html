@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
   <meta charset="UTF-8">
   <title>Loan Application</title>
@@ -57,18 +57,20 @@
 </head>
 <body>
   <div class="container">
-    <h2>Get up to රු 50,0000 loan fully online!</h2>
+    <h2>Get up to රු 500,000 loan fully online!</h2>
     <p>Simple application process. Only NIC is required.</p>
 
     <div class="slider-container">
       <label for="loanRange">Set up your loan:</label>
       <input type="range" id="loanRange" min="30000" max="500000" step="1000" value="30000" />
-      <div class="output">රු <span id="loanAmount">30000</span></div>
+      <div class="output">රු <span id="loanAmount">30,000</span></div>
     </div>
 
     <div class="repayment">
-      Total repayment amount: රු <span id="repaymentAmount">32400</span><br>
-      Interest rate: <span id="interestRate">8%</span>
+      Total repayment amount: රු <span id="repaymentAmount">32,400</span><br>
+      Interest rate: <span id="interestRate">8%</span><br>
+      <strong>Duration:</strong> <span id="duration">6</span> months<br>
+      <strong>Monthly payment:</strong> රු <span id="monthlyPayment">5,400</span>
     </div>
 
     <button class="btn">Apply for a loan</button>
@@ -78,14 +80,40 @@
     const loanRange = document.getElementById("loanRange");
     const loanAmount = document.getElementById("loanAmount");
     const repaymentAmount = document.getElementById("repaymentAmount");
+    const interestRate = document.getElementById("interestRate");
+    const duration = document.getElementById("duration");
+    const monthlyPayment = document.getElementById("monthlyPayment");
 
-    loanRange.addEventListener("input", function() {
-      const loan = parseInt(this.value);
+    function updateLoanDetails(value) {
+      const loan = parseInt(value);
+      let months = 6;
+
+      if (loan <= 50000) {
+        months = 6;
+      } else if (loan <= 160000) {
+        months = 12;
+      } else if (loan <= 350000) {
+        months = 24;
+      } else {
+        months = 36;
+      }
+
       const interest = loan * 0.08;
-      const total = loan + interest;
+      const totalRepayment = loan + interest;
+      const monthly = totalRepayment / months;
 
       loanAmount.textContent = loan.toLocaleString();
-      repaymentAmount.textContent = total.toLocaleString();
+      repaymentAmount.textContent = totalRepayment.toLocaleString(undefined, { maximumFractionDigits: 0 });
+      duration.textContent = months;
+      monthlyPayment.textContent = monthly.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+
+    // Initialize on load
+    updateLoanDetails(loanRange.value);
+
+    // On slider move
+    loanRange.addEventListener("input", function () {
+      updateLoanDetails(this.value);
     });
   </script>
 </body>
