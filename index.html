@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>ණය අයදුම්පත</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
       background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px 10px;
     }
 
-    .container {
+    .container,
+    .section-wrapper {
       max-width: 400px;
+      width: 100%;
+      margin: 0 auto 30px;
       background: white;
-      padding: 30px;
-      margin: auto;
       border-radius: 15px;
+      padding: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
     }
 
     h2 {
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .slider-container {
@@ -44,21 +47,29 @@
       font-size: 18px;
     }
 
-    .btn {
+    .btn, .cta, .promo-button {
+      width: 100%;
       background-color: #28a745;
       color: white;
       border: none;
-      padding: 12px 25px;
+      padding: 12px;
       font-size: 16px;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       margin-top: 20px;
     }
 
-    /* Loan eligibility section styles */
+    .promo-button {
+      background-color: #4f46e5;
+    }
+
+    .promo-button:hover {
+      background-color: #254eda;
+    }
+
     .eligibility-container {
       max-width: 400px;
-      margin: auto;
+      margin: 0 auto 30px;
     }
 
     .card {
@@ -71,15 +82,34 @@
       box-shadow: 0 1px 6px rgba(0,0,0,0.05);
     }
 
+    .icon {
+      font-size: 28px;
+      color: #9b7bff;
+      background-color: #f1edff;
+      border-radius: 50%;
+      padding: 10px;
+      margin-right: 16px;
+    }
+
+    .info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .info p {
+      margin: 4px 0 0;
+      color: #555;
+      font-size: 15px;
+    }
+
     .promo-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      max-width: 400px;
+      width: 100%;
+      margin: 40px auto;
       background-color: #f9f9ff;
       padding: 30px 20px;
       border-radius: 10px;
-      margin: 40px auto;
-      max-width: 500px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -96,26 +126,10 @@
       font-size: 18px;
     }
 
-    .promo-button {
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    .promo-button:hover {
-      background-color: #254eda;
-    }
-
     .steps-section {
-      margin-top: 30px;
       max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      margin: 30px auto;
     }
 
     .step {
@@ -153,44 +167,24 @@
       text-align: left;
     }
 
-    .icon {
-      font-size: 28px;
-      color: #9b7bff;
-      background-color: #f1edff;
-      border-radius: 50%;
-      padding: 10px;
-      margin-right: 16px;
-    }
-
-    .info h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #222;
-    }
-
-    .info p {
-      margin: 4px 0 0;
-      color: #555;
-      font-size: 15px;
-    }
-
-    .cta {
+    .features-section {
+      max-width: 400px;
       width: 100%;
-      padding: 14px;
-      background: linear-gradient(90deg, #917aff, #a48aff);
-      color: white;
-      border: none;
-      border-radius: 14px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .features-section h2 {
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- Loan Calculator Section -->
+  <!-- Loan Calculator -->
   <div class="container">
     <h2>රු 500,000 දක්වා ණය – සම්පූර්ණයෙන්ම Online!</h2>
     <p>සරල අයදුම් ක්‍රියාවලියක් – ඔබේ හැඳුනුම්පත පමණක් අවශ්‍ය වේ.</p>
@@ -211,7 +205,7 @@
     <button class="btn">ණයක් ඉල්ලන්න</button>
   </div>
 
-  <!-- Eligibility Section -->
+  <!-- Eligibility -->
   <div class="eligibility-container">
     <div class="card">
       <div class="icon">👤</div>
@@ -237,75 +231,67 @@
     <button class="cta">දැන්ම ණයක් ඉල්ලන්න</button>
   </div>
 
-  <!-- Promo Section -->
+  <!-- Promo -->
   <section class="promo-section">
-    <img src="https://i.ibb.co/nMDZ3sMb/pexels-moose-photos-170195-1036622.jpg" alt="Promo Image" class="promo-image" />
+    <img src="https://i.ibb.co/nMDZ3sMb/pexels-moose-photos-170195-1036622.jpg" class="promo-image" />
     <div class="promo-text">
       <p>ඔබගේ පළමු online ණය – විනාඩි 15න්!</p>
       <button class="promo-button">දැන්ම ඉල්ලන්න</button>
     </div>
   </section>
 
-  <!-- Steps Section -->
+  <!-- Steps -->
   <div class="steps-section">
-    <div class="step" id="step1">
+    <div class="step">
       <div class="number">1</div>
-      <div class="text">
-        <strong>ඔබේ ණය මුදල තෝරන්න</strong><br>
-      </div>
+      <div class="text"><strong>ඔබේ ණය මුදල තෝරන්න</strong></div>
     </div>
-    <div class="step" id="step2">
+    <div class="step">
       <div class="number">2</div>
-      <div class="text">
-        <strong>තිරණය සඳහා රැදී සිටින්න</strong><br>
-      </div>
+      <div class="text"><strong>තිරණය සඳහා රැදී සිටින්න</strong></div>
     </div>
-    <div class="step" id="step3">
+    <div class="step">
       <div class="number">3</div>
-      <div class="text">
-        <strong>ඔබගේ ගිණුමට මුදල් ලැබේ</strong><br>
-      </div>
+      <div class="text"><strong>ඔබගේ ගිණුමට මුදල් ලැබේ</strong></div>
       <div class="check">✔</div>
     </div>
   </div>
-  
- <section class="promo-section">
-    <img src="https://i.ibb.co/xtC5Mrt8/Personal-Loan-for-Self-Employed.png" alt="Promo Image" class="promo-image" />
-    <div class="promo-text">
-      <p>Fill in the application form
-You can leave a request by filling out the form</p>
-      <button class="promo-button">Apply for a loan</button>
-   </div>
-  </section>
-</div>
- <div class="features-section">
-      <h2>අපගේ විශේෂත්වය</h2>
-      <div class="card">
-        <div class="icon">~</div>
+
+  <!-- Features -->
+  <div class="features-section">
+    <h2>අපගේ විශේෂත්වය</h2>
+    <div class="card">
+      <div class="icon">~</div>
+      <div class="info">
         <h3>ලභාදයකි</h3>
-        <p>ඔබ ගෙවිය යුතුය ඇතුළු අවම ආපසු ගෙවීම් මුදලක් නිසා අපගේ සේවාව සුපිරියකි</p>
+        <p>අවම ආපසු ගෙවීම් මුදලක් නිසා අපගේ සේවාව සුපිරියකි</p>
       </div>
-      <div class="card">
-        <div class="icon">✓</div>
+    </div>
+    <div class="card">
+      <div class="icon">✓</div>
+      <div class="info">
         <h3>විශ්වාසනීයයි</h3>
-        <p>Capital Lanka යනු නව ප්‍රවේශයක් සහ වගකීමක් සහිතව සපයන සන්සුන් සහ සපයන්නෙකි</p>
+        <p>Capital Lanka යනු වගකීමකින් යුතු සේවාවකි</p>
       </div>
-      <div class="card">
-        <div class="icon">101</div>
+    </div>
+    <div class="card">
+      <div class="icon">101</div>
+      <div class="info">
         <h3>සරලයි</h3>
-        <p>ඉක්මන් සහ සරල මුදල් විස්දැම් ඔබගේ නිවසේ සිටම විනාඩි පහක කාලයක තුළ</p>
+        <p>ඉක්මන් හා සරල මුදල් විස්දැම් ඔබගේ නිවසේ සිටම</p>
       </div>
     </div>
   </div>
+
+  <!-- Second Promo -->
   <section class="promo-section">
-    <img src="https://i.ibb.co/q3W93MjW/features.png" alt="Promo Image" class="promo-image" />
+    <img src="https://i.ibb.co/q3W93MjW/features.png" class="promo-image" />
     <div class="promo-text">
-      <p>Wait for the decision
-The decision is made in just 1 minute</p>
+      <p>Wait for the decision<br>Decision made in just 1 minute</p>
       <button class="promo-button">Apply for a loan</button>
-   </div>
+    </div>
   </section>
-</div>
+
   <script>
     const loanRange = document.getElementById("loanRange");
     const loanAmount = document.getElementById("loanAmount");
@@ -317,16 +303,10 @@ The decision is made in just 1 minute</p>
     function updateLoanDetails(value) {
       const loan = parseInt(value);
       let months = 6;
-
-      if (loan <= 50000) {
-        months = 6;
-      } else if (loan <= 160000) {
-        months = 12;
-      } else if (loan <= 350000) {
-        months = 24;
-      } else {
-        months = 36;
-      }
+      if (loan <= 50000) months = 6;
+      else if (loan <= 160000) months = 12;
+      else if (loan <= 350000) months = 24;
+      else months = 36;
 
       const interest = loan * 0.08;
       const totalRepayment = loan + interest;
@@ -344,5 +324,6 @@ The decision is made in just 1 minute</p>
       updateLoanDetails(this.value);
     });
   </script>
+
 </body>
 </html>
